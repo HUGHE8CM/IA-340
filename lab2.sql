@@ -3,7 +3,7 @@
 -- Create tables
 CREATE TABLE IF NOT EXISTS professor
 (
-    p_email INTEGER NOT NULL,
+    p_email VARCHAR(50) NOT NULL,
     p_name VARCHAR(50) NOT NULL,
     office CHARACTER(20) NOT NULL UNIQUE,
     PRIMARY KEY(p_email)
