@@ -29,9 +29,9 @@ CREATE TABLE IF NOT EXISTS course
 
 CREATE TABLE IF NOT EXISTS enroll
 (
-    s_email VARCHAR(50) NOT NULL,
     c_number VARCHAR(20) NOT NULL,
-    PRIMARY KEY(s_email, c_number)
+    s_email VARCHAR(50) NOT NULL,
+    PRIMARY KEY(c_number, s_email)
 );
 
 
