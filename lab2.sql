@@ -6,15 +6,14 @@ CREATE TABLE IF NOT EXISTS professor
     p_email INTEGER NOT NULL,
     p_name VARCHAR(50) NOT NULL,
     office CHARACTER(20) NOT NULL UNIQUE,
-    p_email VARCHAR(50) NOT NULL,
-    PRIMARY KEY(p_email, p_email)
+    PRIMARY KEY(p_email)
 );
 
 CREATE TABLE IF NOT EXISTS student
 (
     s_email VARCHAR(50) NOT NULL,
     s_name VARCHAR(50) NOT NULL,
-    " major" VARCHAR(20) NOT NULL,
+    major VARCHAR(20) NOT NULL,
     PRIMARY KEY(s_email)
 );
 
@@ -56,3 +55,4 @@ ALTER TABLE enroll
     
 
 -- Create Indexes
+
