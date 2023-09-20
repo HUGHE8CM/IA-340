@@ -1,3 +1,8 @@
+--insert into student(s_email,s_name,major)
+--values ('s2@jmu.edu','s2','IA'),
+('s3@jmu.edu','s3','ISAT'),
+('s4@jmu.edu','s4','ISAT');
+
 --insert into  public.professor(p_email,p_name,office)
 --values('p1@jmu.edu','p1','o1'),
 		--('p2@jmu.edu','p1','o2')
@@ -49,9 +54,20 @@ limit 1
 
 2.9
 select professor.p_name,
-	course.c_name 
+	course.c_name
 from professor 
 inner join course
 on professor.p_email=course.p_email 
 
 2.10
+select professor.p_name,
+count (course.c_name)as teaching_number
+from professor 
+inner join course
+on professor.p_email=course.p_email
+
+group by professor.p_name
+
+order by teaching_number desc 
+
+limit 1
